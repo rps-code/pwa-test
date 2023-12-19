@@ -1,0 +1,13 @@
+{
+	"name": "express",
+	"version": "1.0.0",
+	"description": "Express server for PWA Test.",
+	"main": "main.mjs",
+	"author": "Karl.Chelton@netcall.com",
+	"license": "MIT",
+	"private": true,
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.18.2"
+	}
+}
