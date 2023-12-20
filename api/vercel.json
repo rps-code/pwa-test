@@ -8,10 +8,6 @@
 	],
 	"routes": [
 		{ "src": "/api/(.*)", "dest": "main.mjs" },
-		{ "src": "/manifest.json", "dest": "/public/manifest.json" },
-		{
-			"src": "index.js",
-			"use": "@now/node"
-		}
+		{ "src": "/manifest.json", "dest": "/public/manifest.json" }
 	]
 }
