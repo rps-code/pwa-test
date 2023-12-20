@@ -3,7 +3,7 @@
 	"routes": [
 		{ "src": "/api/(.*)", "dest": "main.mjs" },
 		{ "src": "/manifest.json", "dest": "/public/manifest.json" },
-		{ "src": "/serviceWorker.js", "dest": "/public/serviceWorker.js" },
+		{ "src": "/serviceWorker.js", "dest": "/src/serviceWorker.ts" },
 		{ "src": "/(.*)", "dest": "/public/$1" }
 	]
 }
