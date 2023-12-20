@@ -6,12 +6,12 @@ const app = express();
 app.use(cors());
 
 app.get('/api/exampleMessage', (req, res) => {
-	res.json({ message: "I am exampleMessage from the Express server" });
+    const randomNumber = Math.floor(Math.random() * 100);
+    res.json({ message: "I am exampleMessage from the Express server", number: randomNumber });
 });
 
-const port = 3000;
-app.listen(port, () => {
-	console.log(`Server running at http://localhost:${port}`);
+app.listen(3000, () => {
+    console.log(`[WEEEEWOOOOO] Server running`);
 });
 
 export default app;
