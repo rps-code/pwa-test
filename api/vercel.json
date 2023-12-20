@@ -7,7 +7,7 @@
 		}
 	],
 	"routes": [
-		{ "src": "/api/(.*)", "dest": "./index.js" },
+		{ "src": "/api/(.*)", "dest": "/api" },
 		{ "src": "/manifest.json", "dest": "/public/manifest.json" }
 	]
 }

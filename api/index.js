@@ -6,8 +6,10 @@ const app = express();
 app.use(cors());
 
 app.get('/api/exampleMessage', (req, res) => {
-    // res.setHeader('Content-Type', 'text/html');
-    // res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
+    res.setHeader('Content-Type', 'text/html');
+
+    // Tells the CDN to serve from the cache and update in the background  at most once per second
+    res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
 
     const randomNumber = Math.floor(Math.random() * 100);
 
