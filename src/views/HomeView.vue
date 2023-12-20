@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h1>{{ apiData?.message }}</h1>
-		<button @click="fetchApiData">Refresh Data</button>
+		<button @click="fetchApiData">Refresh API Data</button>
 		</div>
 	</template>
 	
