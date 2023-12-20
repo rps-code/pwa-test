@@ -1,11 +1,5 @@
 {
 	"version": 2,
-	"builds": [
-		{
-			"src": "./index.js",
-			"use": "@vercel/node"
-		}
-	],
 	"routes": [
 		{ "src": "/api/(.*)", "dest": "/api" },
 		{ "src": "/manifest.json", "dest": "/public/manifest.json" }
