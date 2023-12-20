@@ -17,7 +17,7 @@
 	const fetchApiData = async () => {
 		try {
 			const apiUrl = import.meta.env.VITE_API_BASE_URL;
-			const response = await fetch(`${apiUrl}:3000/api/exampleMessage`);
+			const response = await fetch(`${apiUrl}/api/exampleMessage`);
 			if (!response.ok) throw new Error('Network response was not ok');
 
 			const data: ApiData | null = await response.json();

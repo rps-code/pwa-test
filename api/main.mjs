@@ -6,12 +6,12 @@ const app = express();
 app.use(cors());
 
 app.get('/api/exampleMessage', (req, res) => {
-    const randomNumber = Math.floor(Math.random() * 100);
-    res.json({ message: `I am exampleMessage woooo ${randomNumber}` });
-});
+    res.setHeader('Content-Type', 'text/html');
+    res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
 
-app.listen(3000, () => {
-    console.log(`[WEEEEWOOOOO] Server running`);
+    const randomNumber = Math.floor(Math.random() * 100);
+
+    res.json({ message: `I am exampleMessage woooo ${randomNumber}` });
 });
 
 export default app;
