@@ -2,7 +2,7 @@
 	"name": "express",
 	"version": "1.0.0",
 	"description": "Express server for PWA Test.",
-	"main": "main.mjs",
+	"main": "main.js",
 	"author": "Karl.Chelton@netcall.com",
 	"license": "MIT",
 	"private": true,
