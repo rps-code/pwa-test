@@ -1,8 +1,9 @@
 {
 	"name": "express",
 	"version": "1.0.0",
+	"type": "module",
 	"description": "Express server for PWA Test.",
-	"main": "main.mjs",
+	"main": "index.js",
 	"author": "Karl.Chelton@netcall.com",
 	"license": "MIT",
 	"private": true,

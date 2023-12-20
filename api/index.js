@@ -14,4 +14,8 @@ app.get('/api/exampleMessage', (req, res) => {
     res.json({ message: `I am exampleMessage woooo ${randomNumber}` });
 });
 
+app.listen(3000, () => {
+    console.log(`[WEEEEWOOOOO] Server running`);
+});
+
 export default app;
