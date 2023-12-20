@@ -1,15 +1,9 @@
 {
 	"version": 2,
-	"builds": [
-		{
-			"src": "main.mjs",
-			"use": "@now/node"
-		}
-	],
 	"routes": [
-		{
-			"src": "/(.*)",
-			"dest": "main.mjs"
-		}
+		{ "src": "/api/(.*)", "dest": "main.mjs" },
+		{ "src": "/manifest.json", "dest": "/public/manifest.json" },
+		{ "src": "/serviceWorker.js", "dest": "/public/serviceWorker.js" },
+		{ "src": "/(.*)", "dest": "/public/$1" }
 	]
 }
