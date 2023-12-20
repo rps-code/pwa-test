@@ -1,7 +1,17 @@
 {
 	"version": 2,
+	"builds": [
+		{
+			"src": "main.mjs",
+			"use": "@now/node"
+		}
+	],
 	"routes": [
 		{ "src": "/api/(.*)", "dest": "main.mjs" },
-		{ "src": "/manifest.json", "dest": "/public/manifest.json" }
+		{ "src": "/manifest.json", "dest": "/public/manifest.json" },
+		{
+			"src": "index.js",
+			"use": "@now/node"
+		}
 	]
 }
