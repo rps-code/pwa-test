@@ -1,11 +1,30 @@
+const cacheName = 'PWA-TEST';
+
 self.addEventListener('install', event => {
-	console.log('Service Worker installing:', event);
+	event.waitUntil(
+		event.waitUntil(self.skipWaiting())
+	);
 });
 
-self.addEventListener('fetch', event => {
-	console.log('Fetching:', event.request.url);
+self.addEventListener('fetch', (event) => {
+	console.log('Fetch:', event.request.url);
 
-    event.respondWith(
-        fetch(event.request).catch(() => caches.match(event.request))
-    );
+	event.respondWith(
+		caches.match(event.request).then((response) => {
+			if (response) return response;
+
+			return fetch(event.request);
+		})
+	);
+});
+
+self.addEventListener('message', (event) => {
+    if (event.data.type === 'cacheUrls') {
+        event.waitUntil(
+            caches.open(cacheName).then( (cache) => {
+				console.log('Caching all:', event.data.payload)
+				return cache.addAll(event.data.payload);
+			})
+        );
+    }
 });
