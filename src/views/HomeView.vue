@@ -2,6 +2,7 @@
 	<div>
 		<h1>{{ apiData?.message }}</h1>
 		<button @click="fetchApiData">Refresh API Data</button>
+		<img src="/images/cat.jpg" style="display: block;"/>
 	</div>
 </template>
 	
