@@ -13,7 +13,7 @@ app.get('/api/exampleMessage', (req, res) => {
 
     // Return some dummy message for the time being with a random number.
     const randomNumber = Math.floor(Math.random() * 100);
-    res.json({ message: `I am exampleMessage woohoo ${randomNumber}` });
+    res.json({ message: `Your random number is ${randomNumber}` });
 });
 
 // Listen to port 3000
