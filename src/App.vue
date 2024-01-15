@@ -21,6 +21,16 @@
 			const cacheName = 'pwa-test-v4';
 			const isOnline = window.navigator.onLine;
 
+			// You can also use event listeners like so. Ref: https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine
+			window.addEventListener('offline', () => {
+				console.log('You are offline');
+			});
+
+			window.addEventListener('online', () => {
+				console.log('You are online');
+			});
+
+
 			if (isOnline) {
 				console.log('You are ONLINE, calling from API.');
 
